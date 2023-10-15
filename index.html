@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=ibm-plex-sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta property="og:image" content="repository-cover-template.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
+    <title>Password Generator</title>
+</head>
+<body>
+    <main>
+        <h1>Random Pass</h1>
+        <div class="display">
+            <input type="text" disabled placeholder="Click the button to generate password" id="passwordBox">
+            <i id="copyBt" class="bi bi-copy"></i>
+        </div>
+        <div class="msg-box" id="msgBox">
+            <i class="bi bi-info-circle-fill"></i><p id="msgText">msgBox</p>
+        </div>
+        <div class="options">
+            <div class="title">
+                <h3>Settings</h3>
+            </div>
+
+            <div class="settings-wrapper">
+                <input type="number" placeholder="12" id="pwdLen">
+                <label for="cbSpecChars">Special chars
+                    <input type="checkbox" id="cbSpecChars">
+                </label>
+                <label for="cbNumbers">Numbers
+                    <input type="checkbox" id="cbNumbers">
+                </label>
+                <label for="cbUpper">Uppercase
+                    <input type="checkbox" id="cbUpper">
+                </label>
+                <label for="cbPIN">PIN format
+                    <input type="checkbox" id="cbPIN">
+                </label>
+            </div>
+        </div>
+        <button class="btn" id="generateBt"><i class="bi bi-lightning-fill"></i><span>Generate Password</span></button>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
