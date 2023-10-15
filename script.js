@@ -26,7 +26,8 @@ if(w < 640){
 }
 
 // Show message
-function show_msg(){
+function copyToClipboard(){
+    navigator.clipboard.writeText(password);
     msgBox.style.display = 'flex';
     document.getElementById('msgText').innerHTML = 'Copied to clipboard (click to close)';
 }
@@ -73,11 +74,9 @@ bt_generate.addEventListener('click', function(){
     }
     
     passwordBox.value = password;
-    navigator.clipboard.writeText(password);
-    show_msg()
+    copyToClipboard()
 });
 
 copyBt.addEventListener('click', function(){
-    navigator.clipboard.writeText(password);
-    show_msg();
+    copyToClipboard();
 });
